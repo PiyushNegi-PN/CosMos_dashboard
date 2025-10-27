@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Space — Interactive Solar System</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/controls/OrbitControls.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="saturn.png" alt="Saturn hero" class="hero-image">
+      <div class="hero-text">
+        <h1> The CosMos</h1>
+        <p>Explore the Solar System</p>
+        <p>Interactive 3D visualization · Planet info · AI assistant</p>
+      </div>
+    </div>
+  </header>
+ 
+  <section id="solar-system" class="panel">
+    <div id="three-root"></div>
+    <div class="overlay top-left">
+      <h2>The S_System</h2>
+    </div>
+  </section>
+
+  <section id="planet-slider" class="panel horizontal">
+    <div class="slider" id="slider">
+      <div class="slide" data-planet="mercury">
+        <canvas class="mini-canvas" data-planet="mercury"></canvas>
+        <div class="slide-label">Mercury</div>
+      </div>
+      <div class="slide" data-planet="venus">
+        <canvas class="mini-canvas" data-planet="venus"></canvas>
+        <div class="slide-label">Venus</div>
+      </div>
+      <div class="slide" data-planet="earth">
+        <canvas class="mini-canvas" data-planet="earth"></canvas>
+        <div class="slide-label">Earth</div>
+      </div>
+      <div class="slide" data-planet="mars">
+        <canvas class="mini-canvas" data-planet="mars"></canvas>
+        <div class="slide-label">Mars</div>
+      </div>
+      <div class="slide" data-planet="saturn">
+        <canvas class="mini-canvas" data-planet="saturn"></canvas>
+        <div class="slide-label">Saturn</div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <aside id="info-panel" class="info-panel">
+    <button id="close-info" class="close-btn">✕</button>
+    <div id="info-content" class="info-content"></div>
+  </aside>
+
+  <div id="chat-widget">
+    <button id="chat-toggle" class="chat-toggle">💬 Chat</button>
+    <div id="chat-panel" class="chat-panel">
+      <div class="chat-header"><strong>Space Assistant</strong></div>
+      <div id="chat-messages" class="chat-messages"></div>
+      <div class="chat-input">
+        <input id="chat-text" placeholder="Ask about planets...">
+        <button id="chat-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
