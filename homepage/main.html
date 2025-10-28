@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Space — Interactive Solar System</title>
+  <title>The CosMos</title>
 
   <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/controls/OrbitControls.js"></script>
@@ -11,15 +11,18 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
   <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
       <img src="saturn.png" alt="Saturn hero" class="hero-image">
       <div class="hero-text">
-        <h1> The CosMos</h1>
-        <p>Explore the Solar System</p>
-        <p>Interactive 3D visualization · Planet info · AI assistant</p>
+        <h1>The CosMos</h1>
+        <p>Journey through the Universe</p>
+        <p>Interactive 3D visualization · Real-time planet data · AI-powered space assistant</p>
       </div>
     </div>
   </header>
@@ -27,7 +30,7 @@
   <section id="solar-system" class="panel">
     <div id="three-root"></div>
     <div class="overlay top-left">
-      <h2>The S_System</h2>
+      <h2>Solar System</h2>
     </div>
   </section>
 
@@ -66,8 +69,10 @@
   <div id="chat-widget">
     <button id="chat-toggle" class="chat-toggle">💬 Chat</button>
     <div id="chat-panel" class="chat-panel">
-      <div class="chat-header"><strong>Space Assistant</strong></div>
-      <div id="chat-messages" class="chat-messages"></div>
+      <div class="chat-header"><strong>✨ Space Assistant</strong></div>
+      <div id="chat-messages" class="chat-messages">
+        <div style="padding: 8px; font-size: 14px; opacity: 0.7;">Welcome! Ask me about planets, space, or anything cosmic! 🚀</div>
+      </div>
       <div class="chat-input">
         <input id="chat-text" placeholder="Ask about planets...">
         <button id="chat-send">Send</button>
@@ -75,5 +80,6 @@
     </div>
   </div>
 
+  <script type="module" src="main.js"></script>
 </body>
 </html>
